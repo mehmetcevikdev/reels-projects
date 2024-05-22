@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #000000;
+}
+.container {
+    margin: 10rem auto 0;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.container *, .container *:before, .container *:after {
+    position: absolute;
+}
+.thread {
+    width: 10px;
+    height: 30px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    background: brown;
+    background: linear-gradient(black, brown 90%);
+    z-index: 1;
+    border-radius: 40% 40% 0 0;
+}
+.flame {
+    width: 24px;
+    height: 120px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 50% 100%;
+    border-radius: 50% 50% 20% 20%;
+    background: #ffffff;
+    animation: move 3s linear infinite, playing 3s linear infinite;
+}
+.blink {
+    width: 100px;
+    height: 150px;
+    transform: translateX(-50%);
+    border-radius: 50% ;
+    background: #e76a00;
+    filter: blur(40px);
+}
+@keyframes move {
+    0%, 100% {
+        transform: translateX(-50%) rotate(-5deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(5deg);
+    }
+}
+@keyframes playing {
+    0%, 100% {
+        height: 100px;
+    }
+    50% {
+        height: 110px;
+    }
+}

@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 100px;
+}
+.card{
+    position: relative;
+    min-height: 200px;
+    min-width: 250px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: -10px 0 40px #000;
+    color: #000;
+    font-weight: 900;
+    font-size: 22px;
+    transition: .3s ease-in-out;
+}
+.card + .card{
+    margin-left: -10%;
+}
+.card:hover{
+    transform: rotate(-4deg);
+}
+.card:hover ~ .card{
+    z-index: 1;
+    transform: translate(60px);
+}
