@@ -1,0 +1,53 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h1{
+    position: relative;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+h1::before, h1::after{
+    position: absolute;
+    background-color: rgb(36, 192, 212);
+    width: 50%;
+    height: 100%;
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    padding: 0 0.1em;
+}
+h1::before{
+    content: "ke";
+    left: 0;
+    animation: moveLeft 2.5s ease-in-out infinite;
+}
+h1::after{
+    content: "ep";
+    right: 0;
+    animation: moveRight 2.5s ease-in-out infinite;
+}
+@keyframes moveLeft {
+    0%, 25%, 100%{
+        left: 0;
+    }
+    50%, 75%{
+        left: -2em;
+    }
+}
+@keyframes moveRight{
+    0%, 25%, 100%{
+        right: 0;
+    }
+    50%, 75%{
+        right: -2em;
+    }
+}
