@@ -1,0 +1,33 @@
+body{
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner{
+  background-image: linear-gradient(#ba42ff 35%,
+  #00e1ff);
+  width: 100px;
+  height: 100px;
+  animation: spinning 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50%;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px #ba42ff,
+  0px 5px 20px 0px #00e1ff;
+}
+
+.spinnerin{
+  background-color: #242424;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+@keyframes spinning {
+  to{
+    transform: rotate(360deg);
+  }
+}
