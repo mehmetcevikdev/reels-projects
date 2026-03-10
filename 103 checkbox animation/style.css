@@ -1,0 +1,48 @@
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #e8e8e8;
+    margin: 0;
+}
+
+.switch {
+  --a: 0.5s ease-out;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  height: 2em;
+  border-radius: 2em;
+  box-shadow: 0 0 0 0.66em #aaa;
+  aspect-ratio: 212.4992/84.4688;
+  background-color: #aaa;
+}
+
+#check {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch svg {
+  height: 100%;
+}
+
+.switch svg path {
+  color: #fff;
+  stroke-width: 16;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 136 224;
+  transition:
+    all var(--a),
+    0s transform;
+  transform-origin: center;
+}
+
+#check:checked ~ .switch svg path {
+  stroke-dashoffset: 180;
+  transform: scaleY(-1);
+}
